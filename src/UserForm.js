@@ -1,8 +1,9 @@
+import Input from './Input'
+
 function UserForm(){
     return (
         <div>
-           Name: <input type="text"/>
-           Age: <input type="text"/>
+           <Input/>
         </div>
     );
 }

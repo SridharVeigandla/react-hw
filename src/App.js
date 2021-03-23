@@ -7,9 +7,7 @@ import Button from './Button';
 
 function App() {
 
-  function shoot() {
-    alert("Great Shot!");
-  }
+ 
 
   return (
     <div className="App">
