@@ -3,6 +3,7 @@ import './App.css';
 import Movies from './Movies'
 import Wish from './Wish';
 import UserForm from './UserForm'
+import Button from './Button';
 
 function App() {
 
@@ -12,9 +13,9 @@ function App() {
 
   return (
     <div className="App">
-     <Wish/>
+      <Wish/>
       <UserForm/>
-      <button onClick={shoot}>Take the shot!</button>
+      <Button/>
       <Movies/>
     </div>
     
