@@ -1,8 +1,8 @@
-function Input() {
+function Input(props) {
 
     return (
         <div>
-            Mobile: <input type="text" />
+           {props.label} : <input type={props.type} value={props.value} />
         </div>
 
     )
