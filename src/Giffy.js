@@ -1,4 +1,4 @@
-function Giffy(props){
+/*function Giffy(props){
     return(
         <div>
             <img 
@@ -14,4 +14,4 @@ function Giffy(props){
 
 
 }
-export default Giffy;
+export default Giffy;*/

@@ -1,17 +1,12 @@
 import { render } from "@testing-library/react";
 
-function Wish(props) {
+function Wish() {
 
-    function activateLasers(){
-
-        alert("clicked");
-    }
+   
     return (
         <div>
-            <h1>Hello World! !! Mr . {props.name}</h1>
-            <button onClick={activateLasers}>
-                Activate Lasers
-            </button>
+            <h1>Hello World! !! Mr . Kiran</h1>
+           
         </div>
     );
 }
