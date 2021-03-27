@@ -12,18 +12,28 @@ import Phones from './Phones'
 import Laps from './Laps'
 import Languages from './Languages'
 import Tv from './Tv'
+import NumberList from './advanced/ListTest';
+import ConditionalComponent from './advanced/ConditionalComponent';
+import Conditional from './advanced/Conditional';
+import TwoWheels from './TwoWheels';
 function App() {
 
- 
+  const numbers = [1, 2, 3, 4, 5];
 
   return (
     <div className="App">
+      <NumberList numbers={numbers}/>
+      <ConditionalComponent login="no"/>
+      
+      <Conditional fresh="yes"/>
+      <TwoWheels/>
      {/* <Wish/>
       <UserForm/>
       <Button/>
      <Movies/>*/}
       <Cars brand="benz" name="c class" color="red"/>
       <Phones />
+      <Laps/>
       <Tv/>
       { /* <Laps/>
        <Languages/>

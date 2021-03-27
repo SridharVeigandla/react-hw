@@ -4,49 +4,46 @@ import React, { Component } from 'react';
 import axios from 'axios';
 class Tv extends React.Component{
 
-    
-
-
     tvPrice =()=>{
-    
         alert( this.state.price);
     }
-
 
     componentDidMount() {
 
         //alert("from componentDidMount !!");
         axios.get('http://localhost:3001/getCars')
-        .then((response) => {
-
-
+        .then((rs) => {
             this.setState({
-                name:response.data.name,
-                size:response.data.size,
-                price:response.data.price
+                name:rs.data.name,
+                size:rs.data.size,
+                price:rs.data.price
               });
-          console.log(response.data);
-          console.log(response.status);
-          console.log(response.statusText);
-          console.log(response.headers);
-          console.log(response.config);
-        });
-       
+        //  console.log(response.data);
+         // console.log(response.status);
+         // console.log(response.statusText);
+         // console.log(response.headers);
+         // console.log(response.config);
+
+
+
+
+
+        });       
 
     }
 
   
-    componentWillUnmount() {
+   // componentWillUnmount() {
       //  alert(" From componentWillUnmount");
-    }
+  //  }
 
 
     constructor(props){
         super(props);
         this.state = {
             name:'',
-                    size:'',
-                    price:''
+            size:'',
+            price:''
           }
        
 
