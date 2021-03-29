@@ -1,11 +1,11 @@
 import { render } from "@testing-library/react";
 
-function Wish() {
+function Wish(props) {
 
    
     return (
         <div>
-            <h1>Hello World! !! Mr . Kiran</h1>
+            <h1>Hello World!{props.name}</h1>
            
         </div>
     );

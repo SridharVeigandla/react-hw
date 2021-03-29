@@ -1,56 +1,40 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import { render } from "@testing-library/react"
 import axios from 'axios';
+import Movies from './Movies';
 
 
-class Laps extends React.Component{
+function Laps(props){
+
+const [movies,setMovies] = useState(null);
 
 
-    /*bestLap = () =>{
-        alert(this.state.brand)
-    }*/
+   useEffect(()=>{
+
+    axios.get('http://localhost:3001/getLaptops').then((res)=>{
+         console.log("From Laps >>>>>>>>")
+         console.log(res.data.laps);
+         console.log("From Laps >>>>>>>>");
+
+        setMovies(res.data.laps.map((mv)=>{
+            <li>{mv}</li>
+            }));
+        //setMovies(moviesList);
 
 
-componentDidMount(){
-    //alert("inDidMount");
-    const numbers = [1, 2, 3, 4, 5];
-const listItems = numbers.map((number) =>
-  <li>{number}</li>
-);
-this.setState=({
-    numbers:listItems
-})
+    });
 
 
-//axios.get().then();
 
-    axios.get('http://localhost:3001/getLaptops')
-        .then((response) => {
-            
-         console.log(response.data.laps);
-         console.log(response.status);
-         console.log(response.statusText);
+   },[movies]);
 
-        });
-}
+    return<>
+    <h1>From Laps</h1>
+    <ul>{movies}</ul>
+    </>
 
-    constructor(props){
-        super(props); 
-        this.state={
-            numbers:null
-        }
-    }
-
-    render(){
-        return <>
-        {/*<h1>{this.state.model}is Best model from{this.state.brand}</h1>
-        <button onClick={this.bestLap}>check</button>*/}
-
-    <>{this.state.numbers}</>
-        
-        </>
-    }
 
 }
 
 export default Laps;
+

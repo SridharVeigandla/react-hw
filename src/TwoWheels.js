@@ -8,6 +8,7 @@ class TwoWheels extends React.Component {
 
     componentDidMount() {
 
+
         axios.get('http://localhost:3001/info')
             .then((xy) => {
                 this.setState({
@@ -15,22 +16,28 @@ class TwoWheels extends React.Component {
                     company: xy.data.company,
                     capacity: xy.data.capacity
                 });
-                console.log(response.data);
-                console.log(response.status);
-                console.log(response.statusText);
+                console.log(xy.data);
+                console.log(xy.status);
+                console.log(xy.statusText);
             });
 
-            constructor(props){
-                super(props);
-                this.state={
-                    name:'',
-                    company:'',
-                    capacity:''
-                }
-            }
+            
     }
-    render(){
+
+
+    constructor(props){
+        super(props);
+        this.state={
+            name:'',
+            company:'',
+            capacity:''
+        }
+    };
+
+    render() {
+        return<>
     <h1>My first bike is {this.state.name}</h1>
+     </>
     }
 }
 export default TwoWheels;
