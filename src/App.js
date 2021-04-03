@@ -18,6 +18,8 @@ import Conditional from './advanced/Conditional';
 import TwoWheels from './TwoWheels';
 import Test from './Test'
 import Test2 from './Test2'
+import Friends from './Friends'
+import Alcohals from './Alcohals'
 function App() {
 
   const numbers = [1, 2, 3, 4, 5];
@@ -25,8 +27,8 @@ function App() {
   return (
     <div className="App">
      
-      
-     <Laps/>
+      <Alcohals/>
+     <Friends/>
      <Test2 name="Sushmitha" age="22" />
      <Wish name="Sridhar"/>
      <Test festival="Holi"/>
@@ -34,6 +36,8 @@ function App() {
 
       
      {/* 
+          <Laps/>
+
       <UserForm/>
       <Button/>
      <Movies/>

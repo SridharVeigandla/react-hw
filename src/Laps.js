@@ -8,6 +8,9 @@ function Laps(props){
 
 const [movies,setMovies] = useState(null);
 
+const moviesList = movies.map((mv)=>{
+<li>{mv}</li>
+});
 
    useEffect(()=>{
 
@@ -16,9 +19,9 @@ const [movies,setMovies] = useState(null);
          console.log(res.data.laps);
          console.log("From Laps >>>>>>>>");
 
-        setMovies(res.data.laps.map((mv)=>{
-            <li>{mv}</li>
-            }));
+        setMovies(res.data.laps);
+      
+
         //setMovies(moviesList);
 
 
@@ -26,11 +29,11 @@ const [movies,setMovies] = useState(null);
 
 
 
-   },[movies]);
+   });
 
     return<>
     <h1>From Laps</h1>
-    <ul>{movies}</ul>
+    <ul>{moviesList}</ul>
     </>
 
 

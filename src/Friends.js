@@ -5,8 +5,8 @@ class Friends extends React.Component{
     constructor(props){
         super(props);
 
-        this.props{
-            vinesh:"vinesh",
+        this.state = {
+            vin:"vinesh",
             srinath: "srinath",
             anwar:"anwar"
         };
@@ -14,7 +14,7 @@ class Friends extends React.Component{
 
     render(){
      return<>
-     <h1>My friends are {this.props.vinesh},{this.props.srinath},{this.props.anwar}</h1>
+     <h1>My friends are {this.state.vin} {this.state.srinath} {this.state.anwar}</h1>
      
      </>
 
