@@ -5,7 +5,7 @@ import './App.css';
 import UserForm from './UserForm'
 //import Button from './Button';
 import Comment from './Comment'
-//import Fruits from './Fruits'
+import Fruits from './Fruits'
 import Cars from './Cars'
 import Giffy from './Giffy'
 import Phones from './Phones'
@@ -17,9 +17,8 @@ import ConditionalComponent from './advanced/ConditionalComponent';
 import Conditional from './advanced/Conditional';
 import TwoWheels from './TwoWheels';
 import Test from './Test'
-import Test2 from './Test2'
 import Friends from './Friends'
-import Alcohals from './Alcohals'
+
 function App() {
 
   const numbers = [1, 2, 3, 4, 5];
@@ -27,13 +26,15 @@ function App() {
   return (
     <div className="App">
      
-      <Alcohals/>
-     <Friends/>
-     <Test2 name="Sushmitha" age="22" />
+      
+     <Friends>This is from children component</Friends>
+    
+
+     
      <Wish name="Sridhar"/>
      <Test festival="Holi"/>
-     <Giffy giffyUrl="https://media.giphy.com/media/toB3AnUDkqE3GENKx0/giphy.gif" name="THis is a Giff"  />
-
+     <Giffy giffyUrl="https://media.giphy.com/media/toB3AnUDkqE3GENKx0/giphy.gif" name="THis is a Giff"  >from children props</Giffy>
+     <Fruits name="Grape" calories="300" color="Black"/>
       
      {/* 
           <Laps/>
@@ -55,7 +56,7 @@ function App() {
     
        <Languages/>
   
-      <Fruits name="Grape" calories="300" color="Black"/>
+      
       */}
      
 

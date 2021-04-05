@@ -7,6 +7,7 @@ function Giffy(props){
               alt={props.name}
             
             />
+            {props.children}
         </div>
 
     );

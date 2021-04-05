@@ -2,7 +2,7 @@
 
 function Fruits(props){
 
-    function clicks(){
+    function Otthu(){
 
         alert("This is Fruits Page");
     }
@@ -10,7 +10,7 @@ function Fruits(props){
     return(
      <div>
        <b> {props.name}</b>is in {props.color} Color and has {props.calories} calories
-        <button onClick={clicks} value="click"> click</button>
+        <button onClick={Otthu} value="click"> Othandi</button>
      </div>
 
     )

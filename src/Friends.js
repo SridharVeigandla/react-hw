@@ -1,22 +1,29 @@
 import { render } from "@testing-library/react"
 import React, { Component } from 'react';
-class Friends extends React.Component{
+class Friends extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
-            vin:"vinesh",
+            vin: "vinesh",
             srinath: "srinath",
-            anwar:"anwar"
+            anwar: "anwar"
         };
     }
 
-    render(){
-     return<>
-     <h1>My friends are {this.state.vin} {this.state.srinath} {this.state.anwar}</h1>
-     
-     </>
+    render() {
+        return (
+            <div>
+                <h1>My friends are {this.state.vin} {this.state.srinath} {this.state.anwar}</h1>
+                {this.props.chidren}
+
+            </div>
+
+        )
+
+
+
 
     }
 
