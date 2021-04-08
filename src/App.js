@@ -18,6 +18,7 @@ import Conditional from './advanced/Conditional';
 import TwoWheels from './TwoWheels';
 import Test from './Test'
 import Friends from './Friends'
+import Counter from './Counter'
 
 function App() {
 
@@ -26,9 +27,9 @@ function App() {
   return (
     <div className="App">
      
-      
+      <Counter/>
      <Friends>This is from children component</Friends>
-    
+     
 
      
      <Wish name="Sridhar"/>
